@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-h1 {
+/*h1 {
 	padding: 15px 0px 15px 22px;
-}
+}*/
 
 .header {
 	background: #3A3A3A;
@@ -15,18 +15,39 @@ h1 {
 	position: fixed;
 }
 
+.left {
+	float: left;
+	display: inline-block;
+	padding: 15px 2px 15px 22px;
+}
+
+.right {
+	float: right;
+	display: inline-block;
+	padding: 18px 28px 22px 5px;
+}
+
 .main {
 	width: 100%;
 	height: 100vh;
-	background: grey;
+	background-image: url(crawl.png);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .mainBox {
-	height: 500px;
-	width: 885px;
-	background: red;
+	height: 450px;
+	width: 600px;
+	color: yellow;
+/*	background: white;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	line-height: 42px;
+}
 
+.color {
+	background: blue;
 }
