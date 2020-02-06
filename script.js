@@ -85,7 +85,7 @@ fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
-    console.log(res);
+	p.innerText = res.results[5].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -97,7 +97,7 @@ fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
-    console.log(res);
+	p.innerText = res.results[4].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
   .catch(err => {
     console.log("something went wrong...", err);
