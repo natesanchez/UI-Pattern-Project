@@ -21,6 +21,10 @@
 	cursor: pointer;
 }
 
+.left:hover {
+	font-size: 17px
+}
+
 .ep1:hover {
 	cursor: pointer;
 	background: #232323;
@@ -70,16 +74,15 @@
 
 .mainBox {
 	height: 450px;
-	width: 700px;
+	width: 750px;
 	color: yellow;
 	background: grey;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 20px;
-	line-height: 45px;
+	line-height: 48px;
 	font-family: 'Roboto Mono', monospace;
-	position: fixed;
 
 }
 
