@@ -6,26 +6,37 @@
 
 // p.innerText = someText
 
-let episode1 = document.querySelector("#1");
+let episode1 = document.querySelector("#one");
 
-let episode2 = document.querySelector("#2");
+let episode2 = document.querySelector("#two");
 
-let episode3 = document.querySelector("#3");
+let episode3 = document.querySelector("#three");
 
-let episode4 = document.querySelector("#4");
+let episode4 = document.querySelector("#four");
 
-let episode5 = document.querySelector("#5");
+let episode5 = document.querySelector("#five");
 
-let episode6 = document.querySelector("#6");
-
-
+let episode6 = document.querySelector("#six");
 
 
 
 
 let baseUrl = "https://swapi.co/api/films/";
 
-function fetchCrawl () {
+function fetchCrawl1 () {
+fetch(baseUrl, ).then(res => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(res.results[0].opening_crawl);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+}
+
+
+function fetchCrawl2 () {
 fetch(baseUrl, ).then(res => {
     return res.json();
   })
@@ -36,4 +47,93 @@ fetch(baseUrl, ).then(res => {
     console.log("something went wrong...", err);
   });
 }
+
+
+function fetchCrawl3 () {
+fetch(baseUrl, ).then(res => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+}
+
+
+function fetchCrawl4 () {
+fetch(baseUrl, ).then(res => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+}
+
+function fetchCrawl5 () {
+fetch(baseUrl, ).then(res => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+}
+
+function fetchCrawl6 () {
+fetch(baseUrl, ).then(res => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+}
+
+
+fetchCrawl1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
