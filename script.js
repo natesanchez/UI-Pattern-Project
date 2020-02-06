@@ -60,7 +60,7 @@ fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
-    console.log(res);
+	p.innerText = res.results[3].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
   .catch(err => {
     console.log("something went wrong...", err);
