@@ -1,10 +1,5 @@
 
-
-// let p = document.querySelector("p")
-
-// someText = "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....".replace(/(\r\n|\n|\r)/gm, " ");
-
-// p.innerText = someText
+let p = document.querySelector("p")
 
 let episode1 = document.querySelector("#one");
 
@@ -18,17 +13,28 @@ let episode5 = document.querySelector("#five");
 
 let episode6 = document.querySelector("#six");
 
+episode1.addEventListener("click", fetchCrawl1)
 
+episode2.addEventListener("click", fetchCrawl2)
+
+episode3.addEventListener("click", fetchCrawl3)
+
+episode4.addEventListener("click", fetchCrawl4)
+
+episode5.addEventListener("click", fetchCrawl5)
+
+episode6.addEventListener("click", fetchCrawl6)
 
 
 let baseUrl = "https://swapi.co/api/films/";
 
-function fetchCrawl1 () {
+function fetchCrawl1 (e) {
+e.preventDefault(); 	
 fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
-    console.log(res.results[0].opening_crawl);
+	p.innerText = res.results[2].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -67,7 +73,7 @@ fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
-    console.log(res);
+	p.innerText = res.results[0].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -98,8 +104,6 @@ fetch(baseUrl, ).then(res => {
   });
 }
 
-
-fetchCrawl1();
 
 
 
