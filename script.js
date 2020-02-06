@@ -6,13 +6,27 @@
 
 // p.innerText = someText
 
+let episode1 = document.querySelector("#1");
+
+let episode2 = document.querySelector("#2");
+
+let episode3 = document.querySelector("#3");
+
+let episode4 = document.querySelector("#4");
+
+let episode5 = document.querySelector("#5");
+
+let episode6 = document.querySelector("#6");
 
 
 
-let BaseUrl = "https://swapi.co/api/films/"
+
+
+
+let baseUrl = "https://swapi.co/api/films/";
 
 function fetchCrawl () {
-fetch(BaseUrl, ).then(res => {
+fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
@@ -23,4 +37,3 @@ fetch(BaseUrl, ).then(res => {
   });
 }
 
-fetchCrawl();
