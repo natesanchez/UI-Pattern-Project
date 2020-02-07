@@ -1,6 +1,8 @@
 
 let p = document.querySelector("p")
 
+let home = document.querySelector(".home")
+
 let homeCrawl = document.querySelector(".homeCrawl")
 
 let episode1 = document.querySelector("#one");
@@ -14,6 +16,8 @@ let episode4 = document.querySelector("#four");
 let episode5 = document.querySelector("#five");
 
 let episode6 = document.querySelector("#six");
+
+home.addEventListener("click", showHome)
 
 episode1.addEventListener("click", fetchCrawl1)
 
@@ -29,6 +33,17 @@ episode6.addEventListener("click", fetchCrawl6)
 
 
 let baseUrl = "https://swapi.co/api/films/";
+
+function showHome () {
+  p.innerText = ""
+  homeCrawl.innerText = "Star Wars Crawls!"
+  episode1.classList.remove("clickColor");
+  episode2.classList.remove("clickColor");
+  episode3.classList.remove("clickColor");
+  episode4.classList.remove("clickColor");
+  episode5.classList.remove("clickColor");
+  episode6.classList.remove("clickColor");
+}
 
 function fetchCrawl1 (e) {
 e.preventDefault(); 	
