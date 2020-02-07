@@ -36,6 +36,7 @@ fetch(baseUrl, ).then(res => {
   .then(res => {
 	p.innerText = res.results[2].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
   })
+  episode1.classList.add("clickColor");
   .catch(err => {
     console.log("something went wrong...", err);
   });
@@ -48,6 +49,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[1].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  episode2.classList.add("clickColor");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -61,6 +63,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[3].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  episode2.classList.add("clickColor");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -103,25 +106,6 @@ fetch(baseUrl, ).then(res => {
     console.log("something went wrong...", err);
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
