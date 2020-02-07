@@ -1,6 +1,8 @@
 
 let p = document.querySelector("p")
 
+let homeCrawl = document.querySelector(".homeCrawl")
+
 let episode1 = document.querySelector("#one");
 
 let episode2 = document.querySelector("#two");
@@ -35,6 +37,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[2].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode1.classList.add("clickColor");
   episode2.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
@@ -54,6 +57,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[1].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode2.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
@@ -73,6 +77,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[3].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode3.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -92,6 +97,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[0].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode4.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -110,6 +116,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[5].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode5.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -128,6 +135,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[4].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  homeCrawl.innerText = ""
   episode6.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
