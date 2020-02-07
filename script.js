@@ -1,9 +1,9 @@
 
-let p = document.querySelector("p")
+let p = document.querySelector("p");
 
-let home = document.querySelector(".home")
+let home = document.querySelector(".home");
 
-let homeCrawl = document.querySelector(".homeCrawl")
+let homeCrawl = document.querySelector(".homeCrawl");
 
 let episode1 = document.querySelector("#one");
 
@@ -17,26 +17,25 @@ let episode5 = document.querySelector("#five");
 
 let episode6 = document.querySelector("#six");
 
-home.addEventListener("click", showHome)
+home.addEventListener("click", showHome);
 
-episode1.addEventListener("click", fetchCrawl1)
+episode1.addEventListener("click", fetchCrawl1);
 
-episode2.addEventListener("click", fetchCrawl2)
+episode2.addEventListener("click", fetchCrawl2);
 
-episode3.addEventListener("click", fetchCrawl3)
+episode3.addEventListener("click", fetchCrawl3);
 
-episode4.addEventListener("click", fetchCrawl4)
+episode4.addEventListener("click", fetchCrawl4);
 
-episode5.addEventListener("click", fetchCrawl5)
+episode5.addEventListener("click", fetchCrawl5);
 
-episode6.addEventListener("click", fetchCrawl6)
-
+episode6.addEventListener("click", fetchCrawl6);
 
 let baseUrl = "https://swapi.co/api/films/";
 
 function showHome () {
-  p.innerText = ""
-  homeCrawl.innerText = "Star Wars Crawls!"
+  p.innerText = "";
+  homeCrawl.innerText = "Star Wars Crawls!";
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
@@ -52,7 +51,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[2].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode1.classList.add("clickColor");
   episode2.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
@@ -65,14 +64,13 @@ fetch(baseUrl, ).then(res => {
   });
 }
 
-
 function fetchCrawl2 () {
 fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
 	p.innerText = res.results[1].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode2.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
@@ -85,14 +83,13 @@ fetch(baseUrl, ).then(res => {
   });
 }
 
-
 function fetchCrawl3 () {
 fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
 	p.innerText = res.results[3].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode3.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -105,14 +102,13 @@ fetch(baseUrl, ).then(res => {
   });
 }
 
-
 function fetchCrawl4 () {
 fetch(baseUrl, ).then(res => {
     return res.json();
   })
   .then(res => {
 	p.innerText = res.results[0].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode4.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -131,7 +127,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[5].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode5.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -150,7 +146,7 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[4].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
-  homeCrawl.innerText = ""
+  homeCrawl.innerText = "";
   episode6.classList.add("clickColor");
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
@@ -162,22 +158,3 @@ fetch(baseUrl, ).then(res => {
     console.log("something went wrong...", err);
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
