@@ -35,7 +35,7 @@ let baseUrl = "https://swapi.co/api/films/";
 
 function showHome () {
   p.innerText = "";
-  homeCrawl.innerText = "Star Wars Crawls!";
+  homeCrawl.innerText = "A long time ago in a galaxy far, far away....";
   episode1.classList.remove("clickColor");
   episode2.classList.remove("clickColor");
   episode3.classList.remove("clickColor");
