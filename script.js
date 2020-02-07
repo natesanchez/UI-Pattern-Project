@@ -110,6 +110,12 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[5].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  episode5.classList.add("clickColor");
+  episode1.classList.remove("clickColor");
+  episode2.classList.remove("clickColor");
+  episode3.classList.remove("clickColor");
+  episode4.classList.remove("clickColor");
+  episode6.classList.remove("clickColor");
   })
   .catch(err => {
     console.log("something went wrong...", err);
@@ -122,6 +128,12 @@ fetch(baseUrl, ).then(res => {
   })
   .then(res => {
 	p.innerText = res.results[4].opening_crawl.replace(/(\r\n|\n|\r)/gm, " ");
+  episode6.classList.add("clickColor");
+  episode1.classList.remove("clickColor");
+  episode2.classList.remove("clickColor");
+  episode3.classList.remove("clickColor");
+  episode4.classList.remove("clickColor");
+  episode5.classList.remove("clickColor");
   })
   .catch(err => {
     console.log("something went wrong...", err);
